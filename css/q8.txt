@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>css 8</title>
+</head>
+<body>
+<div style="background-color:LightCyan;border:5px solid black">Some text.</div>
+<br>
+<div style="background-color:LightCyan;border:3px solid black">Some text.</div>
+<br>
+<div style="background-color:LightCyan;border:1px solid black">Some text.</div>
+<br>
+<div style="background-color:LightCyan;border:0px solid black;color:LightCyan">f</div>
+</body>
+</html>

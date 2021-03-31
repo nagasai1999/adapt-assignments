@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>question 3</title>
+</head>
+<body>
+<div style="background-color:LightCyan;border:1px solid black">
+<h1>THIS IS SOME TEXT.</h1>
+<h2>This is some text.</h2>
+<h2>This is some text.</h2>
+</div>
+
+</body>
+</html>

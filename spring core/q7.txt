@@ -1,0 +1,88 @@
+public class Calculate {
+	private int perimeter;
+	private int volume;
+	
+	
+	public int getPerimeter() {return perimeter;}
+	public void setPerimeter(int perimeter) {this.perimeter = perimeter;}
+	
+	public int getVolume() {return volume;}
+	public void setVolume(int volume) {this.volume = volume;}
+}
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Rectangle implements InitializingBean, DisposableBean{
+	
+	private int length;
+	private int breadth;
+	private int height;
+	
+	
+	public int getLength() {return length;}
+	public void setLength(int length) {this.length = length;}
+	
+	public int getBreadth() {return breadth;}
+	public void setBreadth(int breadth) {this.breadth = breadth;}
+	
+	public int getHeight() {return height;}
+	public void setHeight(int height) {this.height = height;}
+	
+	
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("Destroying Rectangle BEAN");
+	}
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Initializing Rectangle BEAN");
+		
+	}
+	
+	
+	
+}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "https://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans	xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+					http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+			xmlns:context="http://www.springframework.org/schema/context">
+	<context:annotation-config/>
+	
+	
+	
+	
+			
+<!--  	<bean id = "triangle" class = "io.org.javaBrains.Triangle" init-method="init" destroy-method="dest"/> -->
+	
+	<bean id = "rectangle" class = "io.org.shapeCount.Rectangle" >
+		<property name="length" value="2" />
+		<property name="breadth" value="5" />
+		<property name="height" value="7" />
+	</bean>
+	
+	
+	<bean id = "Calculate" class = "io.org.shapeCount.Calculate" >
+		<property name="perimeter" value="#{2*(rectangle.length + rectangle.breadth)}" />
+		<property name="volume" value="#{(rectangle.length * rectangle.breadth * rectangle.height)}"/>
+	</bean>
+
+
+</beans>
+
+public class Calculate {
+	private int perimeter;
+	private int volume;
+	
+	
+	public int getPerimeter() {return perimeter;}
+	public void setPerimeter(int perimeter) {this.perimeter = perimeter;}
+	
+	public int getVolume() {return volume;}
+	public void setVolume(int volume) {this.volume = volume;}
+}

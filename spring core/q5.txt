@@ -1,0 +1,97 @@
+package qfive;
+
+import javax.annotation.*;
+
+
+public class Employee {
+	private int employeeId;
+	private String employeename;
+	
+	@Resource
+	private Pancard pancard;
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getEmployeename() {
+		return employeename;
+	}
+
+	public void setEmployeename(String employeename) {
+		this.employeename = employeename;
+	}
+
+	public Pancard getPancard() {
+		return pancard;
+	}
+
+	public void setPancard(Pancard pancard) {
+		this.pancard = pancard;
+	}
+public String toString() {
+		return employeeId+" "+employeename;
+	}
+	
+}
+
+package qfive;
+
+public class Pancard {
+	private String panName;
+	private String panNo;
+	public String getPanName() {
+		return panName;
+	}
+	public void setPanName(String panName) {
+		this.panName = panName;
+	}
+	public String getPanNo() {
+		return panNo;
+	}
+	public void setPanNo(String panNo) {
+		this.panNo = panNo;
+	}
+
+}
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "https://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans	xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+					http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+			xmlns:context="http://www.springframework.org/schema/context">
+			
+			<context:annotation-config/>
+			
+	<bean id = "employee" class = "qfive.Employee">
+		<property name="employeeId"	value="1999" /> 
+		<property name="employeeName"	value="Naga" /> 
+	</bean>
+	<bean id = "pancard" class = "qfive.PanCard">
+		<property name="panName" value="Naga"/>
+		<property name="panNo" value="123"/>
+		
+	</bean>
+</beans>
+
+package qfive;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AbstractApplicationContext fac = new ClassPathXmlApplicationContext("info.xml");
+		Employee e = (Employee)fac.getBean("Employee");
+		System.out.println(e.toString());
+	}
+
+}

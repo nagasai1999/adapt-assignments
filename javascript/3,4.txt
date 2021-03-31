@@ -1,0 +1,12 @@
+var a=[1,2,3,4,5];
+var i;
+for(i=0;i<5;i++){
+  a[i]=a[i]*a[i];
+}
+console.log(a);
+var a=[1,4,9,16,25];
+var i;
+for(i=0;i<5;i++){
+  a[i]=Math.sqrt(a[i]);
+}
+console.log(a);

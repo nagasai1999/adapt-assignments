@@ -1,0 +1,176 @@
+package qthree;
+
+public class BankAccount {
+	public long accountId;
+	public String accountHolderName;
+	public String accountType;
+	public double accountBalance;
+	public long getAccountId() {
+		return accountId;
+	}
+	public void setAccountId(long accountId) {
+		this.accountId = accountId;
+	}
+	public String getAccountHolderName() {
+		return accountHolderName;
+	}
+	public void setAccountHolderName(String accountHolderName) {
+		this.accountHolderName = accountHolderName;
+	}
+	public String getAccountType() {
+		return accountType;
+	}
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+	public double getAccountBalance() {
+		return accountBalance;
+	}
+	public void setAccountBalance(double accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+	
+	public String toString() {
+		return accountId+" "+accountHolderName+" "+accountType+" "+accountType;
+	}
+}
+
+package qthree;
+
+public interface BankAccountRepository {
+	public double getBalance(long accountId);
+	public double updateBalance(long accountId, double newBalance);
+
+}
+
+package qthree;
+
+public interface BankAccountService {
+	public double withdraw(long accountId, double balance);
+	public double deposit(long accountId, double balance);
+	public double getBalance(long accountId);
+	
+
+}
+
+package qthree;
+
+public class BankAccountServiceImpl implements BankAccountService{
+	private BankAccountepositoryImpl bankAccountepositoryImpl;
+	@Override
+	public double withdraw(long accountId, double balance) {
+		return bankAccountepositoryImpl.getBalance(accountId)-balance;
+	}
+	@Override
+	public double deposit(long accountId, double balance) {
+		return bankAccountepositoryImpl.getBalance(accountId)+balance;
+	}
+	@Override
+	public double getBalance(long accountId) {
+		return bankAccountepositoryImpl.getBalance(accountId);
+	}
+	
+}
+package qthree;
+import java.util.*;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext fac =  new ClassPathXmlApplicationContext("bank.xml");
+		fac.registerShutdownHook();
+		BankAccount bankaccount = (BankAccount)fac.getBean("BankAccount");
+		BankAccountController bankControl = (BankAccountController)fac.getBean("bankAccountController");
+		BankAccountServiceImpl bankService = (BankAccountServiceImpl)fac.getBean(BankAccountServiceImpl.class);
+		BankAccountepositoryImpl bankRepo = (BankAccountepositoryImpl)fac.getBean(BankAccountepositoryImpl.class);
+		
+		bankaccount.toString();
+		
+}
+}
+
+package qthree;
+
+public class BankAccountController {
+	private BankAccountServiceImpl bankAccountServiceImpl;
+	BankAccount b1 = new BankAccount();
+	
+	public double withdraw(long accountId, double balance) {
+		bankAccountServiceImpl.withdraw(accountId, balance);
+		return accountId;
+	}
+	
+	public double deposit(long accountId, double balance) {
+		bankAccountServiceImpl.deposit(accountId, balance);
+		return accountId;
+	}
+	
+	public double getBalance(long accountId) {
+		bankAccountServiceImpl.getBalance(accountId);
+		return accountId;
+	}
+}
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "https://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans	xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+					http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+			xmlns:context="http://www.springframework.org/schema/context">
+<context:component-scan base-package="qthree.bank" />
+
+<bean id="BankAccount" class="qthree.BankAccount">
+	<property name="accountId" 			value="134566657" />
+	<property name="accountHolderName" 	value="Naga" />
+	<property name="accountType" 		value="savings" />
+	<property name="accountBalance" 	value="100000" />
+</bean>
+<bean id="bankAccountepositoryImpl" class="qthree.BankAccountepositoryImpl">
+
+</bean>
+
+<bean id="bankaccountServiceImpl" class="qthree.BankAccountServiceImpl">
+
+</bean>
+
+
+<bean id="bankAccountController" class="qthree.BankAccountController">
+	<property name="bankAccountServiceImpl" ref="bankaccountServiceImpl"/>
+	<property name="bankAccountRepoImpl" ref="bankAccountepositoryImpl"/>
+</bean>
+
+</beans>
+
+package qthree;
+
+public class BankAccountepositoryImpl implements BankAccountRepository{
+	
+	@Override
+	public double getBalance(long accountId) {
+		BankAccount b=new BankAccount();
+		if(b.getAccountId()==accountId) {
+			return b.getAccountBalance();
+		}
+		else {
+			System.out.println("error");
+		}
+		return getBalance(accountId);
+		
+		
+	}
+
+	@Override
+	public double updateBalance(long accountId, double newBalance) {
+		BankAccount b=new BankAccount();
+		if(b.getAccountId()==accountId) {
+			return newBalance;
+		}
+		else {
+			System.out.println("error");
+		}
+		return newBalance;
+	}
+}

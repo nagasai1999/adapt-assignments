@@ -1,0 +1,189 @@
+Address.java
+package qone;
+
+public class Address {
+	private String street;
+	private String city;
+	private String state;
+	private int zip;
+	private String country;
+	
+	public String getStreet() {
+		return street;
+	}
+	public void setStreet(String street) {
+		this.street = street;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public int getZip() {
+		return zip;
+	}
+	public void setZip(int zip) {
+		this.zip = zip;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
+	public String toString() {
+	    return street+" "+city+" "+state+" "+zip+" "+country;
+
+}
+}
+
+Customer.java
+package qone;
+
+public class Customer {
+	private int customerId;
+	private String customerName;
+	private int customerContact;
+	private Address address;
+	
+	
+	
+	public int getCustomerId() {
+		return customerId;
+	}
+
+
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+
+
+	public int getCustomerContact() {
+		return customerContact;
+	}
+
+
+
+	public void setCustomerContact(int customerContact) {
+		this.customerContact = customerContact;
+	}
+
+
+
+	public Address getAddress() {
+		return address;
+	}
+
+
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+
+
+	void display(){  
+	    System.out.println(customerId+" "+customerName+" "+customerContact);  
+	    System.out.println(address);  
+	}
+
+}
+
+Test.java
+package qone;
+
+import org.springframework.beans.factory.BeanFactory;  
+import org.springframework.beans.factory.xml.XmlBeanFactory;  
+import org.springframework.context.ApplicationContext;  
+import org.springframework.context.support.ClassPathXmlApplicationContext;  
+import org.springframework.core.io.ClassPathResource;  
+import org.springframework.core.io.Resource;
+
+public class Test {
+
+	public static void main(String[] args) {
+		 Resource r=new ClassPathResource("applicationContext.xml");  
+		    BeanFactory factory=new XmlBeanFactory(r);
+		    
+		    Customer e=(Customer)factory.getBean("obj");  
+		    e.display(); 
+		    
+
+	}
+
+}
+
+applicationContext.xml
+
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean id="Address1" class="qone.Address">
+<property name="street" value="street1"></property>
+<property name="city" value="Hyderabad"></property>
+<property name="state" value="Telangana"></property> 
+<property name="zip" value="500062"></property>
+<property name="country" value="India"></property>
+ </bean>
+ 
+ 
+<bean id="obj" class="qone.Customer">
+<property name="customerId" value="1"></property>
+<property name="customerName" value="naga"></property>
+<property name="customerContact" value="123456"></property> 
+<property name="address" ref="Address1"></property>
+</bean>
+ 
+</beans>  
+
+junitone.java
+
+package qone;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
+public class junitone {
+	
+	void test() {
+	Resource r=new ClassPathResource("applicationContext.xml");  
+    BeanFactory factory=new XmlBeanFactory(r);
+    
+    Customer e=(Customer)factory.getBean("obj");
+    assertEquals(true,e.containsBean("Address1"),"this is  true");
+	assertEquals(true,e.containsBean("obj"),"this is true");
+}
+}
+
+
+
+

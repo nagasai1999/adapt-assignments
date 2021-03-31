@@ -1,0 +1,9 @@
+function padChars(n,m){
+  var a="";
+  for(var i=0;i<n;i++){
+     a+=m;
+  }
+  return a;
+}
+console.log(padChars(5,"x"));
+console.log(padChars(7,"-"));

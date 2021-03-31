@@ -1,0 +1,60 @@
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+
+public class DrawingApp {
+	public static void main(String[] args) {
+		
+		AbstractApplicationContext fac = new ClassPathXmlApplicationContext("spring.xml");
+		fac.registerShutdownHook();
+		Triangle triangle = (Triangle)fac.getBean("triangle");
+		int e = triangle.draw(2);
+		System.out.println("-----------------------------------");
+		System.out.println("The result from Triangle Bean : "+e);
+		System.out.println("-----------------------------------");
+		}
+}
+
+public class Triangle implements InitializingBean, DisposableBean {
+	
+	public int draw(int r) {
+	return r*2;
+	}
+	
+	
+	
+	public void init() {
+		System.out.println("**************************************************");
+		System.out.println("Initialized the Triangle Bean1 using [INIT] method");	
+	}
+	
+	
+	public void dest() {
+		System.out.println("**************************************************");
+		System.out.println("Destroyed the Triangle Bean2 using [DESTROY] method");	
+	}
+
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("here we can have just initialized the Triangle Bean");
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("here we can have just destroyed the Triangle Bean");
+		
+	}
+	
+	
+}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "https://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id = "triangle" class = "io.org.javaBrains.Triangle" init-method="init" destroy-method="dest"/>
+</beans>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Job application form</title>
+</head>
+<style>
+label{
+text-align:center;
+}
+form{
+text-align:center;
+}
+form {
+  color:crimson;
+  margin: 0 auto;
+  width: 70%;
+  background-color:palegreen;
+  padding: 20px;
+  border: 2px solidblack;
+  border-radius: 1em;
+}
+
+button{
+font-size:20px;}
+</style>
+<body style="background-color:mediumturquoise;text-align:center">
+<h1 style="text-align:center;color:purple">Job Application Form</h1>
+<h2><form action="/application.php" method="GET">
+<div>
+<label>Name</label>
+<input type="text" placeholder="enter your name here" required>
+<div style="color:palegreen">hi</div>
+</div>
+<div><label>email</label>
+<input type="email" placeholder="enter your email here" required>
+</div>
+<div style="color:palegreen">hi</div>
+<div><label>Age</label>
+<input type="number" min="21" max="40"  required>
+</div>
+<div style="color:palegreen">hi</div>
+Gender
+<div><label>Male</label>
+<input type="radio" name="gender">
+</div>
+<div><label>Female</label>
+<input type="radio" name="gender">
+</div>
+<div style="color:palegreen">hi</div>
+Programming Languages you know??
+<div><label>C</label>
+<input type="checkbox"></div>
+<div><label>C++</label>
+<input type="checkbox"></div>
+<div><label>Java</label>
+<input type="checkbox"></div>
+<div><label>Python</label>
+<input type="checkbox"></div>
+<div><label>Others(please specify)</label>
+<input type="text">
+</div>
+<div style="color:palegreen">hi</div>
+<button type="submit">Submit</button>
+</h2>
+</form>
+</body>
+</html>

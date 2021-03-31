@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>css q1</title>
+<style>
+h1{
+background-color:CornFlowerBlue;
+}
+</style>
+</head>
+<body>
+<div style="background-color:LightSteelBlue;">
+<h1><b>CSS background-color example!</b></h1>This is a text inside a div element.
+<p style="background-color:LightCyan">This paragraph has its own background color.</p>
+We are still in the div element.
+<p style="background-color:LightCyan;color:LightCyan">  sds                 </p>
+</div>
+</body>
+</html>

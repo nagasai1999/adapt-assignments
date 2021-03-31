@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>parallax effect</title>
+</head>
+<style>
+.parallax{
+background-image:url("https://thumbs-prod.si-cdn.com/Abm-e-V_cqdIqYDo_cXApagw8zI=/800x600/filters:no_upscale():focal(1471x1061:1472x1062)/https://public-media.si-cdn.com/filer/b6/30/b630b48b-7344-4661-9264-186b70531bdc/istock-478831658.jpg");
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
+</style>
+<body>
+<div style="text-align:center;font-size:36px;height:50px;background-color:cyan;color:blue">Taj Mahal,Agra,India</div>
+<div class="parallax"></div>
+<div style="text-align:center;height:50px;background-color:yellow;color:red;font-size:36px">
+One of the seven wonders in the world.
+</div>
+<div class="parallax"></div>
+<div style="text-align:center;font-size:36px;height:50px;background-color:orange;color:green">Built by ShahJahan</div>
+
+</body>
+</html>

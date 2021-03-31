@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Tribute to Virat Kohli</title>
+</head>
+<body>
+<style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+img {
+  float: right;
+  width: 50%;
+  padding: 5px;
+  
+}
+
+body{
+  background-color:thistle;
+  margin-top:33px;
+  }
+  #u1{
+  color:solid black
+  }
+  table,th,td{
+  border-collapse:collapse;
+border-style:solid;
+	
+	border-color: black;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+ .coloumn{
+ background-color:pink;
+ width: 25%;
+    float: left
+    }
+    .first{
+    background-color:lightgreen;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    }
+    .second{
+    background-color:linen;
+    
+    }
+    
+    .row{clear:both}
+</style>
+<div style="background-color:solid black;color:white"><h3 style="color:white"><a href="#achievements"> Achievements </a><b>|</b><a href="#statistics"> Statistics </a><b>|</b><a href="#Records"> Records </a></h3></div>
+<div></div><h1 style="text-align:center;color:slateblue">Virat Kohli-The Run Machine</h1></div>
+<div><h2 style="text-align:center;color:crimson">Captain of India(Jersey no.18)</h2></div>
+<div style="background-color:pink;color:green"><h3>Virat Kohli(born 5th Nov,1988) is the current captain of Indian Cricket Team.
+ He is the captain of Royal Challengers Bangalore(RCB) in Indian Premier League. He is a right handed top order batsman.
+ He is one of the very few players who is very consistent in ICC player rankings irrespective of the format. Kohli 
+captained India U-19 cricket team which has won the 2008 world cup.</h3></div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/The_President%2C_Shri_Pranab_Mukherjee_presenting_the_Padma_Shri_Award_to_Shri_Virat_Kohli%2C_at_a_Civil_Investiture_Ceremony%2C_at_Rashtrapati_Bhavan%2C_in_New_Delhi_on_March_30%2C_2017_%28cropped%29.jpg" alt="Virat Kohli" style="width:50%">
+<a name="achievements"></a>
+<h2 style=text-align:center;color:mediumvioletred><b><u>Achievements</u></b></h2>
+<table style="background-color:lightskyblue">
+<tr>
+<th><h3><b style="color:darkmagenta">Year</b></h3></th>
+<th><h3><b style="color:darkmagenta">Honour</b></h3></th>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"  width="150px"><h3>2011 - 2020</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC Men's Cricketer of the Decade</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2017 , 2018</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC Cricketer of the Year</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2012 , 2017 , 2018</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC ODI Player of the Year</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2018</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC Test Player of the Year</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2012, 2014, 2016 (captain), 2017 (captain), 2018 (captain), 2019 (captain)</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC ODI Team of the Year</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3> 2017 (captain), 2018 (captain), 2019 (captain)</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC Test Team of the Year</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2011 - 2020</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC Men's ODI Cricketer of the Decade</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2011 - 2020 (captain)</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC Men's Test Team of the Decade</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2011 - 2020</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC Men's ODI Team of the Decade</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2011 - 2020</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>ICC Men's T20I Team of the Decade</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2013</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>Arjuna Award</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2017</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>Padma Sri Award</h3></td>
+</tr>
+<tr>
+<td style="color:blue;text-align:center"><h3>2018</h3></td>
+<td style="color:blue;text-align:center" width="400px"><h3>Rajiv Gandhi Khel Ratna Award</h3></td>
+</tr>
+
+</table>
+<div class="second"><h1 style=text-align:center;color:mediumvioletred><b><u>Career Statistics</u></b></h1></div>
+<a name="statistics"></a>
+<div class="row">
+<div class="coloumn"><h2><ul style="color:darkmagenta"><b><u>Test</u></b></ul>
+<li><b style="color:blue">Matches</b><b style="color:maroon"> : </b><b style="color:green">89</b></li>
+<li><b style="color:blue">Innings</b><b style="color:maroon"> : </b><b style="color:green">151</b></li>
+<li><b style="color:blue">Runs</b><b style="color:maroon"> : </b><b style="color:green">7463</b></li>
+<li><b style="color:blue">High Score</b><b style="color:maroon"> : </b><b style="color:green">254</b></li>
+<li><b style="color:blue">Average</b><b style="color:maroon"> : </b><b style="color:green">52.93</b></li>
+<li><b style="color:blue">100's</b><b style="color:maroon"> : </b><b style="color:green">27</b></li>
+</ul>
+</h2></div>
+<div class="coloumn"><h2><ul style="color:darkmagenta"><b><u>ODI</u></b></ul>
+<li><b style="color:blue">Matches</b><b style="color:maroon"> : </b><b style="color:green">251</b></li>
+<li><b style="color:blue">Innings</b><b style="color:maroon"> : </b><b style="color:green">242</b></li>
+<li><b style="color:blue">Runs</b><b style="color:maroon"> : </b><b style="color:green">12040</b></li>
+<li><b style="color:blue">High Score</b><b style="color:maroon"> : </b><b style="color:green">183</b></li>
+<li><b style="color:blue">Average</b><b style="color:maroon"> : </b><b style="color:green">59.31</b></li>
+<li><b style="color:blue">100's</b><b style="color:maroon"> : </b><b style="color:green">43</b></li>
+</ul>
+</h2></div>
+<div class="coloumn"><h2><ul style="color:darkmagenta"><b><u>T20I</u></b></ul>
+<li><b style="color:blue">Matches</b><b style="color:maroon"> : </b><b style="color:green">84</b></li>
+<li><b style="color:blue">Innings</b><b style="color:maroon"> : </b><b style="color:green">79</b></li>
+<li><b style="color:blue">Runs</b><b style="color:maroon"> : </b><b style="color:green">2928</b></li>
+<li><b style="color:blue">High Score</b><b style="color:maroon"> : </b><b style="color:green">94</b></li>
+<li><b style="color:blue">Average</b><b style="color:maroon"> : </b><b style="color:green">54.28</b></li>
+<li><b style="color:blue">50's</b><b style="color:maroon"> : </b><b style="color:green">25</b></li>
+</ul>
+</h2></div>
+<div class="coloumn"><h2><ul style="color:darkmagenta"><b><u>IPL</u></b></ul>
+<li><b style="color:blue">Matches</b><b style="color:maroon"> : </b><b style="color:green">192</b></li>
+<li><b style="color:blue">Innings</b><b style="color:maroon"> : </b><b style="color:green">184</b></li>
+<li><b style="color:blue">Runs</b><b style="color:maroon"> : </b><b style="color:green">5978</b></li>
+<li><b style="color:blue">High Score</b><b style="color:maroon"> : </b><b style="color:green">113</b></li>
+<li><b style="color:blue">Average</b><b style="color:maroon"> : </b><b style="color:green">38.17</b></li>
+<li><b style="color:blue">100's</b><b style="color:maroon"> : </b><b style="color:green">5</b></li>
+</ul>
+</h2></div>
+</div>
+<b style="color:lightgray">.</b><br>
+<b style="color:lightgray">.</b><br>
+<a name="Records"></a>
+<div class="first">
+<ul>
+<li><h3 style="color:crimson">Virat Kohli was ranked 66th in Forbes list of the top 100 highest paid athletes in the world for the year 2020 with estimated earnings of $26 million.</h3></li>
+<li><h3 style="color:crimson">Time magazine named Kohli one of the 100 most influential people in the world in 2018.</h3></li>
+<li><h3 style="color:crimson">Kohli has the second highest number of centuries in the world</h3></li>
+<li><h3 style="color:crimson">Kohli has the highest number of centuries in runchases in the world</h3></li>
+<li><h3 style="color:crimson">Kohli has the second highest number of centuries in IPL</h3></li>
+</ul>
+</div>
+<br/>
+
+<div style="background-color:cyan"><h1 style="font:ComicSansMS;text-align:center;color:purple">"Success doesn't teach you much but failures do"<b style="color:black"> - </b><b style="color:blue">Virat Kohli</b></h1></div>
+<a href="" class="fa fa-facebook"></a>
+<a href="" class="fa fa-twitter"></a>
+</body>
+</html>

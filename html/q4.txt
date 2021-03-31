@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>question 4</title>
+</head>
+<body>
+<h1>This table has borders:</h1>
+<style>
+#t1,#t2 {
+  border: 1px solid black;
+}
+</style>
+<table id="t1">
+<tr>
+<td id="t2">100</td>
+<td id="t2">200</td>
+<td id="t2">300</td>
+</tr>
+<tr>
+<td id="t2">400</td>
+<td id="t2">500</td>
+<td id="t2">600</td>
+</tr>
+</table>
+
+<h1>And this table has no borders:</h1>
+<table>
+<tr>
+<td>100</td>
+<td>200</td>
+<td>300</td>
+</tr>
+<tr>
+<td>400</td>
+<td>500</td>
+<td>600</td>
+</tr>
+</table>
+</body>
+</html>

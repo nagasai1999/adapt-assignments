@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Restaurant Site</title>
+</head>
+<style>
+.h1{
+ float: right;
+  width: 50%;
+  padding: 5px;
+}
+img{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.hu
+{
+    display: block;
+    text-align: -webkit-center;
+}
+</style>
+<body style="background-color:darkseagreen">
+<div>
+<img class="h1" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+<h1 style="color:darkseagreen">hi</h1>
+<h1 style="color:darkseagreen">hi</h1>
+<h1 style="color:darkseagreen">hi</h1>
+<h1 style="color:darkseagreen">hi</h1>
+<div><h1 style="text-align:center;color:crimson">Eat n Go Restaurants</h1></div>
+<h1 style="color:darkseagreen">hi</h1>
+<h1 style="color:darkseagreen">hi</h1>
+<h1 style="color:darkseagreen">hi</h1>
+<h2 style="color:darkseagreen">hi</h2>
+</div><div style="background-color:lightblue"><h1 style="text-align:center;color:indigo">Our dishes</h1></div>
+<img src="https://www.spiceupthecurry.com/wp-content/uploads/2020/09/paneer-tikka-recipe-2-360x360.jpg">
+<div style="text-align:center;color:crimson"><h1>Starters starting@ Rs.100/-</h1></div>
+<h2 style="color:darkseagreen">hi</h2>
+<img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2016%2F03%2FHD-201311-r-tofu-kale-and-tomatoes-in-white-wine.jpg">
+<div style="text-align:center;color:crimson"><h1>Vegetarian starting@ Rs.200/-</h1></div>
+<h2 style="color:darkseagreen">hi</h2>
+<img src="https://c.ndtvimg.com/2020-05/0ug0nbfo_chicken-masala_625x300_28_May_20.jpg">
+<div style="text-align:center;color:crimson"><h1>Vegetarian starting@ Rs.300/-</h1></div>
+<h2 style="color:darkseagreen">hi</h2>
+
+<h1 style="text-align:center;color:darkviolet">Thank You</h1>
+<div class="hu"><h1 style="background-color:cyan;color:Red">Visit or Order by<br><b style="color:blue">Cell:1234567890</b><br><b style="color:blue">phone:123456</b></h1></div>
+</body>
+</html>

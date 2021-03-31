@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>form</title>
+</head>
+<body>
+<form>
+<div>
+<label>Username:</label>
+<input>
+</div>
+<div>
+<label>
+Password:
+<input type="password">
+</label>
+</div>
+</form>
+</body>
+</html>

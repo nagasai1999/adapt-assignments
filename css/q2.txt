@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>css q2</title>
+</head>
+<body>
+<div style="background-color:LightCyan;border:1px solid black">
+<h1>This is heading 1</h1>
+<h2 style="text-decoration:line-through">This is heading 2</h2>
+<h3 style="text-decoration:underline">This is heading 3</h3>
+<h4>This is heading 4</h4>
+</div>
+</body>
+</html>

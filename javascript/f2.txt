@@ -1,0 +1,15 @@
+function f3(x){
+  function f1(x){
+function square(x) { return(x*x); }
+function double(x) { return(x*2); }
+  return square(double(x))
+}
+function f2(x){
+function square(x) { return(x*x); }
+function double(x) { return(x*2); }
+  return double(square(x))
+}
+return f1(f2(x));  
+}
+console.log(f3(5));
+console.log(f3(10));

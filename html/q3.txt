@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>question 4</title>
+</head>
+<body>
+<style>
+table,td {
+  border: 1px solid black;
+}
+</style>
+<table>
+<h1>One column:</h1><br>
+<tr>
+<td>100</td>
+</tr>
+</table>
+<table>
+<h1>One row and three columns:</h1><br>
+<tr>
+<td>100</td>
+<td>200</td>
+<td>300</td>
+</tr>
+</table>
+<table>
+<h1>One row and three columns:</h1><br>
+<tr>
+<td>100</td>
+<td>200</td>
+<td>300</td>
+</tr>
+<tr>
+<td>400</td>
+<td>500</td>
+<td>600</td>
+</tr>
+</table>
+</body>
+</html>
